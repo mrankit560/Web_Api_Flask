@@ -33,6 +33,11 @@ def prediction():
     else:
         Married = 0
 
+    # if loan_req['Credit_History'] == "Cleared Debts":
+    #     Credit_History = 1
+    # else:
+    #     Credit_History = 0
+
     ApplicantIncome = loan_req['ApplicantIncome']
     LoanAmount = loan_req['LoanAmount']
     Credit_History = loan_req['Credit_History']
@@ -46,3 +51,6 @@ def prediction():
 
     return {"loan_approval_status": pred}
 
+if __name__ == '__main__':
+    print("Starting Flask app...")
+    app.run(debug=True)
